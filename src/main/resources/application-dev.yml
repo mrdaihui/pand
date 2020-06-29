@@ -1,0 +1,46 @@
+server:
+  port: 8888
+
+spring:
+  #数据库配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.13.205.140:3306/pand?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: P@ssword!
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  redis:
+    host: 106.13.205.140
+    database: 0
+    port: 6379
+    password: P@ssword!
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.hui.pand.mapper: DEBUG
+    org.springframework.boot.autoconfigure: ERROR
+
+es:
+  ip: 106.13.205.140
+  port: 9300
+logstash:
+  address: 106.13.205.140:1234
+
+#跨域配置
+cors-filter:
+  is-open: false
+  origins: http://127.0.0.1

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hui.pand.mapper.ApiRequestRecordsMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.hui.pand.entity.ApiRequestRecordsEntity" id="apiRequestRecordsMap">
+        <result property="id" column="id"/>
+        <result property="apiDes" column="api_des"/>
+        <result property="uri" column="uri"/>
+        <result property="method" column="method"/>
+        <result property="ip" column="ip"/>
+        <result property="classMethod" column="class_method"/>
+        <result property="requestParams" column="request_params"/>
+        <result property="responseCode" column="response_code"/>
+        <result property="requestId" column="request_id"/>
+        <result property="responseMsg" column="response_msg"/>
+        <result property="responseData" column="response_data"/>
+        <result property="createTime" column="create_time"/>
+        <result property="modifyTime" column="modify_time"/>
+    </resultMap>
+
+</mapper>
